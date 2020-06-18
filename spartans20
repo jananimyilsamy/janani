@@ -1,0 +1,20 @@
+import java.util.*;
+import java.lang.*;
+
+class Main
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		int input=1;
+		Scanner scanner=new Scanner(System.in);
+		while(input/10==0||input/100==0)
+		{
+			input=scanner.nextInt();
+			if(input==42)
+			{
+				break;
+			}
+			System.out.println(input);
+		}
+	}
+}
