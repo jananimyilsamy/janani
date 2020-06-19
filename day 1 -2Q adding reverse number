@@ -1,0 +1,32 @@
+import java.util.*;
+import java.lang.*;
+
+class Main
+{
+	public static int rev(int i) 
+    { 
+        int revnum=0;
+        while(i!=0)
+        {
+            revnum=(revnum*10)+(i%10);
+            i/=10;
+        }
+        return revnum;
+    } 
+	public static void main (String[] args) 
+	{
+		Scanner sc = new Scanner(System.in);
+	    int t = sc.nextInt();
+	    int i=1;
+	   while(i<=t)
+	    {
+	        int n = sc.nextInt();
+	        int m = sc.nextInt();
+	        i++;
+ 
+	        System.out.println(rev(rev(n)+rev(m)));
+	    }
+	   
+	}
+
+}
