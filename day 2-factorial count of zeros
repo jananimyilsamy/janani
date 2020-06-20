@@ -1,0 +1,20 @@
+#include<stdio.h>
+
+int main()
+{
+ int testcase,num,countzero;
+ scanf("%d",&testcase);
+ while(testcase--)
+ {
+ countzero=0;
+ scanf("%d",&num);
+ while(num>=5)
+ {
+num /= 5;
+ countzero += num;
+ 
+ }
+ printf("%d\n",countzero);
+ }
+ return 0;
+}
