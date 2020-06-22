@@ -1,0 +1,14 @@
+public class Solution {
+    
+    public int repeatedNumber(final List<Integer> A) {
+        Set<Integer> set = new HashSet<Integer>();
+        for(int num : A){
+            if(set.contains(num)){
+                return num;
+            } else {
+                set.add(num);
+            }
+        }
+        return A.size()+1;
+    }
+}
