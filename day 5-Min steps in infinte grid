@@ -1,0 +1,15 @@
+public class Solution {
+    public int coverPoints(int[] A, int[] B) {
+        int currX =A[0];
+        int currY = B[0];
+        int c = 0;
+        for (int i=1;i<A.length;i++) {
+            int x = A[i];
+            int y = B[i];
+            c += Math.max(Math.abs(y-currY), Math.abs(x-currX));
+            currY = y;
+            currX = x;
+        }
+        return c;
+    }
+}
