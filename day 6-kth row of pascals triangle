@@ -1,0 +1,23 @@
+public class Solution {
+	public ArrayList<Integer> getRow(int A) {
+	    
+	  
+	    ArrayList<Integer> list = new ArrayList<Integer>(A+1);
+	  
+	   
+  int line=A+1;
+    int C = 1;  
+    for (int i = 1; i <= line; i++)  
+    {
+        
+        
+      list.add(C);  
+      C = C * (line - i) / i;  
+    
+    }
+
+  
+  return list;
+	
+}
+}
