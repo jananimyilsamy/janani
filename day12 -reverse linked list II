@@ -1,0 +1,26 @@
+public class Solution {
+    public ListNode reverseBetween(ListNode A, int B, int C) {
+    
+
+        if(B == C)
+            return A;
+        ListNode dummy = new ListNode(-1);
+        ListNode prev = dummy;
+        ListNode curr;
+        dummy.next = A;
+        
+        for(int i = 0 ; i < B-1 ; i++){
+            prev = prev.next;
+        }
+        
+        curr = prev.next;
+        
+        while(B++ < C){
+            ListNode temp = curr.next;
+            curr.next = temp.next;
+            temp.next = prev.next;
+            prev.next = temp;
+        }
+      return dummy.next;  
+    }
+}
